@@ -1,18 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha256-2TnSHycBDAm2wpZmgdi0z81kykGPJAkiUY+Wf97RbvY=" crossorigin="anonymous"></link>
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Tytuł Filmu </label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  <form method="post">
+        <div className="form-group">
+          <label htmlFor="filmTitle">Tytuł filmu</label>
+          <input
+            type="text"
+            name="filmTitle"
+            id="filmTitle"
+            className="form-control"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="filmType">Rodzaj</label>
+          <select name="filmType" id="filmType" className="form-control">
+            <option></option>
+            <option value="1">Komedia</option>
+            <option value="2">Obyczajowy</option>
+            <option value="3">Sensacyjny</option>
+            <option value="4">Horror</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <button type="submit" className="btn btn-primary">
+            Dodaj
+          </button>
         </div>
       </form>
-    </div>
+      </div>  
   );
 }
 
